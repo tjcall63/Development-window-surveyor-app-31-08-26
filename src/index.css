@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media print {
+  @page {
+    margin: 12mm;
+  size: A4;
+  }
+  body {
+    background: white;
+  }
+  .print\:hidden {
+    display: none !important;
+  }
+  .break-before-page {
+    break-before: page;
+  }
+  .avoid-break-inside {
+    break-inside: avoid;
+  }
+}
